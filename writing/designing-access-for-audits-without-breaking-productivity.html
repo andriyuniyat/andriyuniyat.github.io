@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Designing Access for Audits Without Breaking Productivity | Andriy Uniyat</title>
+  <meta name="description" content="How to design access controls that satisfy audits without slowing teams down or creating operational friction." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">Andriy Uniyat</a>
+    <nav class="links">
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/writing/">Writing</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-title">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/writing/">Writing</a></div>
+    <h1>Designing access for audits without breaking productivity</h1>
+    <p>Security and compliance don’t have to come at the cost of velocity.</p>
+  </div>
+
+  <article class="prose">
+    <p>
+      Audits have a reputation for slowing everything down.
+      Engineers brace for access spreadsheets, managers scramble for approvals,
+      and productivity drops while teams “clean things up.”
+    </p>
+
+    <p>
+      In most cases, the problem isn’t the audit—it’s that access was never designed with audits in mind.
+    </p>
+
+    <h2>Why audits feel painful</h2>
+    <ul>
+      <li>Access decisions were made ad hoc</li>
+      <li>Roles were never clearly defined</li>
+      <li>No one knows who owns which application</li>
+      <li>Evidence must be reconstructed retroactively</li>
+    </ul>
+
+    <p>
+      When access models grow organically without structure, audits expose the underlying chaos.
+    </p>
+
+    <h2>Audit-friendly access starts with ownership</h2>
+    <p>
+      The most effective environments establish ownership before controls.
+      Every application has a technical owner, a business owner, and a defined access model.
+    </p>
+
+    <p>
+      This clarity removes the need for panic when questions arise—answers already exist.
+    </p>
+
+    <h2>Design principles that preserve productivity</h2>
+    <ul>
+      <li>Use role- or group-based access instead of individual grants</li>
+      <li>Make access changes predictable and repeatable</li>
+      <li>Document “why” as well as “how”</li>
+      <li>Align reviews with existing business rhythms</li>
+    </ul>
+
+    <p>
+      When access is designed around how teams actually work,
+      audits become validation—not disruption.
+    </p>
+
+    <h2>Audits as a design constraint, not an afterthought</h2>
+    <p>
+      The goal isn’t to design systems <em>for auditors</em>.
+      The goal is to design systems that auditors can understand.
+    </p>
+
+    <p>
+      That usually means fewer exceptions, clearer patterns,
+      and less reliance on institutional memory.
+    </p>
+
+    <p class="footnote">
+      Well-designed access controls don’t slow teams down—they remove uncertainty and rework.
+    </p>
+  </article>
+
+  <footer class="footer">
+    <div>© <span id="y"></span> Andriy Uniyat</div>
+    <div class="footer-links">
+      <a href="/writing/">All writing</a>
+      <a href="/">Home</a>
+    </div>
+  </footer>
+</main>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
