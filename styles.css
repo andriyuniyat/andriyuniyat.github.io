@@ -1,28 +1,15 @@
 :root{
-  --bg: #0b0f14;
-  --card: #111823;
-  --text: #e8eef6;
-  --muted: #a7b4c6;
-  --border: #223044;
-  --link: #8db7ff;
-  --btn: #1b2a40;
-  --btn2: #2a76ff;
-  --shadow: 0 10px 30px rgba(0,0,0,.25);
+  /* Recruiter-friendly: light first, calm contrast */
+  --bg: #ffffff;
+  --card: #f6f8fb;
+  --text: #0b0f14;
+  --muted: #4a5b73;
+  --border: #d7dfea;
+  --link: #1a57d6;
+  --btn: #eef2f8;
+  --btn2: #1a57d6;
+  --shadow: 0 10px 25px rgba(16,24,40,.08);
   --radius: 18px;
-}
-
-@media (prefers-color-scheme: light){
-  :root{
-    --bg: #ffffff;
-    --card: #f6f8fb;
-    --text: #0b0f14;
-    --muted: #4a5b73;
-    --border: #d7dfea;
-    --link: #1a57d6;
-    --btn: #eef2f8;
-    --btn2: #1a57d6;
-    --shadow: 0 10px 25px rgba(16,24,40,.08);
-  }
 }
 
 *{ box-sizing: border-box; }
@@ -32,7 +19,7 @@ body{
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
   background: var(--bg);
   color: var(--text);
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 a{ color: var(--link); text-decoration: none; }
@@ -47,8 +34,8 @@ a:hover{ text-decoration: underline; }
 .nav{
   position: sticky;
   top: 0;
+  background: rgba(255,255,255,.85);
   backdrop-filter: blur(10px);
-  background: color-mix(in srgb, var(--bg) 80%, transparent);
   border-bottom: 1px solid var(--border);
   z-index: 100;
 }
@@ -85,9 +72,9 @@ h1{
 }
 .lead{
   margin: 0 0 18px;
-  color: color-mix(in srgb, var(--text) 88%, var(--muted));
+  color: rgba(11,15,20,.82);
   font-size: 18px;
-  max-width: 720px;
+  max-width: 760px;
 }
 
 .cta-row{ display:flex; gap: 12px; margin: 18px 0 18px; flex-wrap: wrap; }
@@ -104,7 +91,8 @@ h1{
 .btn:hover{ text-decoration: none; transform: translateY(-1px); }
 .btn.primary{
   background: var(--btn2);
-  border-color: color-mix(in srgb, var(--btn2) 70%, var(--border));
+  color: #fff;
+  border-color: rgba(26,87,214,.35);
 }
 
 .chips{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
@@ -112,7 +100,7 @@ h1{
   font-size: 13px;
   color: var(--muted);
   border: 1px solid var(--border);
-  background: color-mix(in srgb, var(--card) 85%, transparent);
+  background: rgba(255,255,255,.55);
   padding: 6px 10px;
   border-radius: 999px;
 }
@@ -195,6 +183,7 @@ h1{
   flex-wrap: wrap;
 }
 .footer-links a{ margin-left: 12px; color: var(--muted); }
+
 .page-title{ padding: 26px 0 10px; }
 .page-title h1{ font-size: 30px; margin: 0 0 8px; }
 .page-title p{ margin: 0; color: var(--muted); max-width: 760px; }
@@ -207,7 +196,7 @@ h1{
   box-shadow: var(--shadow);
 }
 .prose h2{ margin-top: 18px; }
-.prose p, .prose li{ color: color-mix(in srgb, var(--text) 82%, var(--muted)); }
+.prose p, .prose li{ color: rgba(11,15,20,.82); }
 .prose ul{ padding-left: 18px; }
 .breadcrumb{ font-size: 13px; color: var(--muted); margin: 16px 0 0; }
 .breadcrumb a{ color: var(--muted); }
