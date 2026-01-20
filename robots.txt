@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://andriyuniyat.github.io/sitemap.xml
