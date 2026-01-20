@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Why SSO Alone Does Not Equal Security | Andriy Uniyat</title>
+  <meta name="description" content="Single Sign-On is a foundation, not a security strategy. Why identity ownership, lifecycle controls, and governance matter more than SSO alone." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">Andriy Uniyat</a>
+    <nav class="links">
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/writing/">Writing</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-title">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/writing/">Writing</a></div>
+    <h1>Why SSO alone does not equal security</h1>
+    <p>Single Sign-On is necessary—but without ownership and lifecycle controls, it creates a false sense of safety.</p>
+  </div>
+
+  <article class="prose">
+    <p>
+      Single Sign-On (SSO) is often treated as the finish line for SaaS security.
+      Once users authenticate through a central identity provider, teams assume risk has been meaningfully reduced.
+      In reality, SSO is only the entry point.
+    </p>
+
+    <p>
+      At scale, most security incidents and audit findings don’t happen because authentication failed.
+      They happen because access was never removed, roles drifted over time, or no one owned the application lifecycle.
+    </p>
+
+    <h2>What SSO actually solves</h2>
+    <ul>
+      <li>Centralized authentication</li>
+      <li>Password and MFA consistency</li>
+      <li>Faster onboarding for new users</li>
+    </ul>
+
+    <p>
+      These are important foundations—but they don’t address what happens <em>after</em> a user is authenticated.
+    </p>
+
+    <h2>Where risk really accumulates</h2>
+    <ul>
+      <li>Users retain access long after roles change</li>
+      <li>Offboarding is delayed or incomplete</li>
+      <li>Admins grant one-off exceptions without visibility</li>
+      <li>No one reviews access because “SSO is enabled”</li>
+    </ul>
+
+    <p>
+      SSO can actually amplify risk if it’s layered on top of unclear ownership and manual access processes.
+      Central login makes it easier to get in—but doesn’t ensure the <em>right</em> access exists.
+    </p>
+
+    <h2>What reduces risk in practice</h2>
+    <ul>
+      <li>Clear ownership for each application</li>
+      <li>Group-based access models tied to roles, not individuals</li>
+      <li>Defined joiner–mover–leaver workflows</li>
+      <li>Regular access reviews with accountable owners</li>
+      <li>Documentation that explains how access is granted and removed</li>
+    </ul>
+
+    <p>
+      These controls aren’t glamorous, but they’re what auditors look for—and what actually prevent incidents.
+    </p>
+
+    <h2>SSO as part of a system, not a checkbox</h2>
+    <p>
+      The most effective environments treat SSO as one component of a broader identity system.
+      Authentication, authorization, lifecycle management, and governance all reinforce each other.
+    </p>
+
+    <p>
+      When SSO is implemented without that system-level thinking, it creates confidence without control.
+      When it’s implemented with ownership and lifecycle discipline, it becomes a powerful enabler.
+    </p>
+
+    <p class="footnote">
+      Security isn’t achieved by turning on a feature—it’s achieved by designing access as a system that evolves with the business.
+    </p>
+  </article>
+
+  <footer class="footer">
+    <div>© <span id="y"></span> Andriy Uniyat</div>
+    <div class="footer-links">
+      <a href="/writing/">All writing</a>
+      <a href="/">Home</a>
+    </div>
+  </footer>
+</main>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
