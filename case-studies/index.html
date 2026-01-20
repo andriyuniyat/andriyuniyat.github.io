@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Case Studies | Andriy Uniyat</title>
+  <meta name="description" content="Sanitized case studies: SaaS ownership, identity integrations, governance, and platform reliability." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="/">Andriy Uniyat</a>
+      <nav class="links">
+        <a href="/case-studies/">Case Studies</a>
+        <a href="/writing/">Writing</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="page-title">
+      <div class="breadcrumb"><a href="/">Home</a> → Case Studies</div>
+      <h1>Case Studies</h1>
+      <p>Sanitized write-ups focused on approach, decisions, and outcomes. No internal documentation or proprietary configurations are shared.</p>
+    </div>
+
+    <div class="list">
+      <a class="list-item" href="/case-studies/sso-governance.html">
+        <div>
+          <div class="title">SSO & access governance across 10+ SaaS applications</div>
+          <div class="meta">Identity architecture • SAML/OIDC • SCIM • audit readiness</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="list-item" href="/case-studies/atlassian-automation.html">
+        <div>
+          <div class="title">Atlassian administration and automation to reduce operational friction</div>
+          <div class="meta">Jira/Confluence • permissions • automation • intake workflow</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="list-item" href="/case-studies/zoom-rooms-reliability.html">
+        <div>
+          <div class="title">Improving Zoom Rooms reliability and lifecycle management at scale</div>
+          <div class="meta">Standardization • device policies • documentation • reliability</div>
+        </div>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div>© <span id="y"></span> Andriy Uniyat</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/writing/">Writing</a>
+      </div>
+    </footer>
+  </main>
+
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
