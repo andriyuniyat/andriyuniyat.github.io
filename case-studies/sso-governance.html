@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>SSO & Access Governance | Case Study | Andriy Uniyat</title>
-  <meta name="description" content="Designing SSO and access governance across multiple SaaS applications using Azure AD/Entra ID patterns, SAML/OIDC, and SCIM." />
+  <title>Designing Enterprise SSO & Access Governance at Scale | Case Study | Andriy Uniyat</title>
+  <meta name="description" content="Designing standardized SSO and access governance across 10+ SaaS applications using Azure AD/Entra ID patterns, SAML/OIDC, and SCIM in a regulated environment." />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
@@ -21,50 +21,58 @@
 
   <main class="container">
     <div class="page-title">
-      <div class="breadcrumb"><a href="/">Home</a> → <a href="/case-studies/">Case Studies</a> → SSO & Governance</div>
-      <h1>SSO & access governance across 10+ SaaS applications</h1>
-      <p>Identity architecture patterns focused on secure access, automation, and audit readiness in a regulated environment.</p>
+      <div class="breadcrumb"><a href="/">Home</a> → <a href="/case-studies/">Case Studies</a> → Enterprise SSO & Governance</div>
+      <h1>Designing Enterprise SSO & access governance at scale</h1>
+      <p>Standardizing identity patterns to reduce access risk, improve audit readiness, and scale SaaS operations in a regulated environment.</p>
     </div>
 
     <article class="prose">
       <h2>Context</h2>
       <p>
-        Multiple business-critical SaaS applications had inconsistent onboarding/offboarding steps, uneven access controls,
-        and limited visibility during audit cycles. The goal was to reduce friction for users while strengthening governance and accountability.
+        In a regulated enterprise environment, inconsistent SaaS access models create audit risk, operational friction, and security gaps.
+        I was responsible for designing and governing a standardized SSO and access management approach across <strong>10+ business-critical SaaS platforms</strong>.
       </p>
 
       <h2>My role</h2>
       <ul>
-        <li>Platform owner for SaaS access patterns and identity integration standards</li>
-        <li>Partnered with Security, HR, Legal, and IT stakeholders on governance requirements</li>
-        <li>Owned implementation approach, documentation, and operational handoffs</li>
+        <li>Owned identity integration standards and access patterns across SaaS applications</li>
+        <li>Partnered with Security, HR, Legal, and IT stakeholders to align governance requirements</li>
+        <li>Defined implementation approach, operational handoff, and documentation/runbooks</li>
       </ul>
 
       <h2>Approach</h2>
       <ul>
-        <li><strong>Standardized SSO patterns</strong> using Azure AD / Entra ID with SAML/OIDC based on vendor capabilities</li>
-        <li><strong>Provisioning strategy</strong> using SCIM where supported; otherwise defined safe, controlled alternatives</li>
-        <li><strong>Access governance</strong>: mapped roles/groups to least-privilege access models and created review checkpoints</li>
-        <li><strong>Operational readiness</strong>: built repeatable runbooks for certificate/metadata renewals and access troubleshooting</li>
+        <li><strong>Standardized SSO patterns:</strong> implemented SSO using Azure AD / Entra ID with SAML or OIDC based on vendor capability</li>
+        <li><strong>Provisioning strategy:</strong> leveraged SCIM where supported; otherwise established controlled provisioning/deprovisioning alternatives</li>
+        <li><strong>Group-based access model:</strong> aligned roles/groups to least-privilege access with clear ownership and change workflow</li>
+        <li><strong>Operational readiness:</strong> created runbooks for certificate/metadata lifecycle, troubleshooting, and escalation paths</li>
+        <li><strong>Governance cadence:</strong> implemented access review checkpoints and documentation standards to support audits</li>
+      </ul>
+
+      <h2>Constraints &amp; tradeoffs</h2>
+      <ul>
+        <li>Not all vendors supported SCIM or granular roles, requiring alternative controls and process guardrails</li>
+        <li>Security requirements had to be balanced against user experience to ensure adoption and minimize exceptions</li>
+        <li>Access models needed to remain auditable and understandable without introducing unnecessary operational overhead</li>
       </ul>
 
       <h2>Outcomes</h2>
       <ul>
-        <li>Reduced manual account management through consistent group-based access patterns</li>
-        <li>Improved audit readiness with clearer ownership, access review practices, and documentation</li>
-        <li>Decreased onboarding/offboarding risk by removing “one-off” access methods</li>
-        <li>Lowered support friction with standardized troubleshooting steps and clear escalation paths</li>
+        <li>Reduced access risk by eliminating “one-off” access paths and standardizing group-based access patterns</li>
+        <li>Improved audit readiness through clearer ownership, access review practices, and consistent documentation</li>
+        <li>Decreased onboarding/offboarding friction by streamlining identity workflows and reducing manual touchpoints</li>
+        <li>Lowered access-related escalations by standardizing troubleshooting steps and operational runbooks</li>
       </ul>
 
       <h2>What I’d do next</h2>
       <ul>
-        <li>Expand access review cadence and automate reporting where possible</li>
-        <li>Continuously harden conditional access posture and exception handling</li>
-        <li>Build a single “access model” catalog for all SaaS apps to simplify governance</li>
+        <li>Automate access review reporting where feasible to improve visibility and reduce effort</li>
+        <li>Continue hardening conditional access posture and exception handling</li>
+        <li>Build a centralized “access model catalog” for all SaaS applications to simplify governance and onboarding</li>
       </ul>
 
       <p class="footnote">
-        Note: This write-up is intentionally generalized and does not include internal identifiers, vendor contracts, or proprietary configurations.
+        Note: This write-up is intentionally sanitized and does not include internal identifiers, contracts, or proprietary configurations.
       </p>
     </article>
 
