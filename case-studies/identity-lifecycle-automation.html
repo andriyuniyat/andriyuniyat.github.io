@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Automating Identity Lifecycle Management to Reduce Access Risk | Case Study | Andriy Uniyat</title>
+  <meta name="description" content="Designing automated joiner-mover-leaver identity workflows to reduce access risk and operational overhead in SaaS environments." />
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="/">Andriy Uniyat</a>
+    <nav class="links">
+      <a href="/case-studies/">Case Studies</a>
+      <a href="/writing/">Writing</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="page-title">
+    <div class="breadcrumb"><a href="/">Home</a> → <a href="/case-studies/">Case Studies</a> → Identity Lifecycle Automation</div>
+    <h1>Automating identity lifecycle management to reduce access risk</h1>
+    <p>Designing joiner–mover–leaver workflows that scale securely across SaaS platforms.</p>
+  </div>
+
+  <article class="prose">
+    <h2>Context</h2>
+    <p>
+      Manual onboarding and offboarding processes increase the risk of orphaned accounts,
+      excessive access, and audit findings. I was responsible for designing and improving
+      identity lifecycle workflows to make access changes predictable, auditable, and scalable.
+    </p>
+
+    <h2>My role</h2>
+    <ul>
+      <li>Owned identity lifecycle design across SaaS applications</li>
+      <li>Integrated HR-driven events with identity and access workflows</li>
+      <li>Partnered with Security and IT to reduce manual access handling</li>
+    </ul>
+
+    <h2>Approach</h2>
+    <ul>
+      <li><strong>Joiner:</strong> standardized onboarding using group-based access and identity-driven provisioning</li>
+      <li><strong>Mover:</strong> aligned role changes with access updates to prevent privilege creep</li>
+      <li><strong>Leaver:</strong> ensured timely deprovisioning and access removal across connected systems</li>
+      <li><strong>Fallback controls:</strong> documented manual processes where automation was not technically possible</li>
+      <li><strong>Operational visibility:</strong> created documentation and checkpoints for access changes</li>
+    </ul>
+
+    <h2>Constraints &amp; tradeoffs</h2>
+    <ul>
+      <li>Not all SaaS platforms supported full automation or SCIM provisioning</li>
+      <li>Identity workflows needed to accommodate edge cases without becoming brittle</li>
+      <li>Security controls had to align with HR and business timelines</li>
+    </ul>
+
+    <h2>Outcomes</h2>
+    <ul>
+      <li>Reduced orphaned accounts and delayed access removal through standardized workflows</li>
+      <li>Lowered operational overhead by minimizing manual access changes</li>
+      <li>Improved audit confidence by making access lifecycle steps consistent and documentable</li>
+      <li>Created a repeatable identity pattern reusable across future SaaS integrations</li>
+    </ul>
+
+    <h2>What I’d do next</h2>
+    <ul>
+      <li>Expand automation coverage as vendors mature their identity capabilities</li>
+      <li>Introduce periodic lifecycle audits to catch edge cases and drift</li>
+    </ul>
+
+    <p class="footnote">
+      Note: This write-up is intentionally sanitized and does not include user data, system identifiers, or internal workflows.
+    </p>
+  </article>
+
+  <footer class="footer">
+    <div>© <span id="y"></span> Andriy Uniyat</div>
+    <div class="footer-links">
+      <a href="/case-studies/">All case studies</a>
+      <a href="/">Home</a>
+    </div>
+  </footer>
+</main>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
