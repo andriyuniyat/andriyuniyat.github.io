@@ -33,6 +33,7 @@
 
       <div class="cta-row">
         <a class="btn primary" href="/case-studies/">View case studies</a>
+        <a class="btn" href="#resume-request">Request resume</a>
         <a class="btn" href="#contact">Get in touch</a>
       </div>
 
@@ -147,21 +148,78 @@
     <section class="section" id="contact">
       <div class="section-head">
         <h2>Contact</h2>
-        <p>Best way to reach me:</p>
+        <p>Request a resume or reach out directly for relevant roles.</p>
       </div>
 
-      <div class="contact">
-        <div class="contact-item">
-          <div class="label">LinkedIn</div>
-          <a href="https://www.linkedin.com/in/a-uniyat" target="_blank" rel="noreferrer">linkedin.com/in/a-uniyat</a>
-        </div>
-        <div class="contact-item">
-          <div class="label">Email</div>
-          <a href="mailto:a.uniyat@gmail.com">a.uniyat@gmail.com</a>
-        </div>
-        <div class="contact-item">
-          <div class="label">GitHub</div>
-          <a href="https://github.com/andriyuniyat" target="_blank" rel="noreferrer">github.com/andriyuniyat</a>
+      <div class="contact-layout">
+        <form class="resume-form" id="resume-request" action="https://formsubmit.co/a.uniyat@gmail.com" method="POST">
+          <input type="hidden" name="_subject" id="requestSubject" value="Resume Request - Andriy Uniyat Portfolio" />
+          <input type="hidden" name="_next" value="https://andriyuniyat.github.io/thank-you.html" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="hidden-field" />
+
+          <div class="form-head">
+            <div>
+              <h3>Request Andriy’s resume</h3>
+              <p>For Enterprise Applications, Business Systems, SaaS Platform, IT Manager, IT Operations, and technology leadership opportunities.</p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="requestName">Name *</label>
+              <input id="requestName" name="name" autocomplete="name" required />
+            </div>
+            <div class="field">
+              <label for="requestCompany">Company *</label>
+              <input id="requestCompany" name="company" autocomplete="organization" required />
+            </div>
+            <div class="field">
+              <label for="requestRole">Role / Position *</label>
+              <input id="requestRole" name="role" required />
+            </div>
+            <div class="field">
+              <label for="requestEmail">Work Email *</label>
+              <input id="requestEmail" name="email" type="email" autocomplete="email" required />
+            </div>
+            <div class="field">
+              <label for="requestReason">Reason for request</label>
+              <select id="requestReason" name="reason">
+                <option>Open Role</option>
+                <option>Recruiter Outreach</option>
+                <option>Talent Acquisition</option>
+                <option>Executive Search</option>
+                <option>Networking</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="requestMessage">Message</label>
+            <textarea id="requestMessage" name="message" rows="4" placeholder="Share the role, company, or context for the request."></textarea>
+          </div>
+
+          <div class="cta-row form-actions">
+            <button class="btn primary" type="submit">Send resume request</button>
+            <a class="btn" href="https://www.linkedin.com/in/a-uniyat" target="_blank" rel="noreferrer">Connect on LinkedIn</a>
+          </div>
+        </form>
+
+        <div class="contact direct-contact">
+          <div class="contact-item">
+            <div class="label">LinkedIn</div>
+            <a href="https://www.linkedin.com/in/a-uniyat" target="_blank" rel="noreferrer">linkedin.com/in/a-uniyat</a>
+          </div>
+          <div class="contact-item">
+            <div class="label">Email</div>
+            <a href="mailto:a.uniyat@gmail.com">a.uniyat@gmail.com</a>
+          </div>
+          <div class="contact-item">
+            <div class="label">GitHub</div>
+            <a href="https://github.com/andriyuniyat" target="_blank" rel="noreferrer">github.com/andriyuniyat</a>
+          </div>
         </div>
       </div>
 
@@ -181,6 +239,17 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+
+    const resumeRequestForm = document.getElementById('resume-request');
+    const requestSubject = document.getElementById('requestSubject');
+
+    resumeRequestForm.addEventListener('submit', () => {
+      const data = new FormData(resumeRequestForm);
+      const reason = data.get('reason') || 'Resume Request';
+      const company = data.get('company') || 'Unknown company';
+      const role = data.get('role') || 'Unknown role';
+      requestSubject.value = `Resume Request - ${reason} - ${company} - ${role}`;
+    });
   </script>
 </body>
 </html>
